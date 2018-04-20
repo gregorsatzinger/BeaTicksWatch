@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tobias.beaticks.MainActivity"
+    tools:deviceIds="wear">
+
+    <ViewSwitcher
+        android:id="@+id/viewSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/connectionFailed"
+                android:layout_width="99dp"
+                android:layout_height="13dp"
+                android:layout_marginEnd="57dp"
+                android:layout_marginStart="57dp"
+                android:layout_marginTop="2dp"
+                android:text="Connection Failed"
+                android:textAppearance="@style/TextAppearance.Compat.Notification.Info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bConnect" />
+
+            <TextView
+                android:id="@+id/value"
+                android:layout_width="40dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="15dp"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <Button
+                android:id="@+id/bConnect"
+                android:layout_width="159dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="27dp"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="15dp"
+                android:onClick="bConnectToDevice"
+                android:text="Connect"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/value" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="76dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="20dp"
+                android:text="BeaTicks"
+                android:textAppearance="@style/TextAppearance.Wearable.Large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="75dp"
+                android:text="BPM:"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/BLDevices"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/device3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="78dp"
+                android:layout_marginStart="77dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:onClick="bSelectDevice"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/device2" />
+
+            <TextView
+                android:id="@+id/device4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="78dp"
+                android:layout_marginStart="77dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:onClick="bSelectDevice"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/device3" />
+
+            <TextView
+                android:id="@+id/device2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="78dp"
+                android:layout_marginStart="77dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:onClick="bSelectDevice"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/device1" />
+
+            <TextView
+                android:id="@+id/device1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="78dp"
+                android:layout_marginStart="77dp"
+                android:layout_marginTop="70dp"
+                android:clickable="true"
+                android:onClick="bSelectDevice"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="150dp"
+                android:layout_height="31dp"
+                android:layout_marginEnd="65dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="30dp"
+                android:text="Select your Device"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </ViewSwitcher>
+
+</android.support.constraint.ConstraintLayout>
